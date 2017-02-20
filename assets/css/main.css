@@ -2090,16 +2090,6 @@
 		box-shadow: inset 0 1px 0 0 #e6e6e6;
 	}
 
-		#footer .copyright {
-			margin-top: 3em;
-			font-size: 0.8em;
-			color: #aaa;
-		}
-
-			#footer .copyright a {
-				color: inherit;
-			}
-
 		#footer ul.icons a {
 			box-shadow: inset 0 0 0 1px #d6d6d6;
 		}
@@ -2321,10 +2311,10 @@
 				}
 
 	}
-	#contact-link {
-		text-decoration: none;
-		text-align: center;
-	}
-	#contact-link:hover {
-		content: attr(data-hover);
-	}
+#contact-link {
+	color: gray;
+	padding-left: 15px;
+}
+#contact-link:hover {
+	color: black
+}
