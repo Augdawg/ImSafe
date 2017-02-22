@@ -1995,7 +1995,6 @@
 /* Header */
 
 	#header {
-		position: relative;
 		margin: 0;
 		background-image: url("images/overlay.png"), url("../../images/header.jpg");
 		background-size: auto, cover;
@@ -2317,4 +2316,31 @@
 }
 #contact-link:hover {
 	color: black
+}
+
+#menubar {
+	position: fixed;
+	width: 100%;
+	padding-top: 5px;
+	background: rgba(0, 0, 0, 0.50);
+}
+
+#menubar li {
+	display: inline;
+}
+
+#donatebtn {
+	background: rgba(255, 255, 255, 0.15);
+	color: #fff;
+	border: solid;
+	border-width: 1px;
+}
+
+#home-link {
+	float: left;
+	color: white;
+	font-weight: bold;
+	font-family: Impact, Charcoal, sans-serif;
+	font-size: 30px;
+	padding-left: 5px;
 }
