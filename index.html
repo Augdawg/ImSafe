@@ -22,12 +22,26 @@
 	<div style="height: 50px;" id="menubar">
 		<ul>
 			<li class="menulink">
-				<a href="#fourth">I'm Safe<span class="fa fa-home menuicon" ></span></a>
+				<a href="#">I'm Safe<span class="fa fa-home menuicon" ></span></a>
 			</li>
 		</ul>
 	</div>
 	<section id="header" class="dark">
-
+		<div id="wrapper" style="width: 100%; height: 100%;">
+			<div id="donationbox">
+				<div id="donationtitle">
+					<div class="fa fa-usd" id="dollaricon"></div>
+					Enter an amount to donate
+				</div>
+				<div id="donationcontent">
+					<input id="donationinput" type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57'> USD
+					</input>
+				</div>
+				<div>
+					<button id="donatebutton">DONATE</button>
+				</div>
+			</div>
+		</div>
 	</section>
 
 	<!-- First -->

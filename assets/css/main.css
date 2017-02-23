@@ -2285,11 +2285,11 @@
 		/* Header */
 
 			#header {
-				padding: 6em 20px 6em 20px;
+				/*padding: 6em 20px 6em 20px;*/
 			}
 
 				#header > header {
-					padding: 0 1em 0 1em;
+					/*padding: 0 1em 0 1em;*/
 				}
 
 		/* Main Sections */
@@ -2350,4 +2350,61 @@
 
 .menuicon {
 	padding-left: 5px;
+}
+
+#donationbox {
+	height: 260px;
+	width: 400px;
+	background-color: rgba(255,255,255,0.30);
+	color: black;
+	margin-left: 200px;
+	border-radius: 10px;
+}
+
+#donationtitle {
+	background-color: #9064BF;
+	text-align: left;
+	padding: 5px;
+	border-radius: 10px;
+	width: 100%;
+	margin-top: 0px;
+	font-size: 20px;
+	color: white;
+	height: 65px;
+	font-family: "Gotham SSm A","Gotham SSm B","Proxima-Nova-n3","Proxima-Nova-1","Proxima-Nova-2","Proxima Nova",sans-serif;
+	line-height: 50px;
+}
+
+#donationcontent {
+	margin-top: 20px;
+	font-family: "Gotham SSm A","Gotham SSm B","Proxima-Nova-n3","Proxima-Nova-1","Proxima-Nova-2","Proxima Nova",sans-serif;
+}
+
+#donationinput {
+	background-color: transparent;
+	border-radius: 3px;
+	border: solid;
+	border-color: rgba(255,255,255,0.30);
+	color: black;
+}
+
+#dollaricon {
+	padding: 15px;
+	border-style: inset;
+	border-radius: 50%;
+	height: 35px;
+	width: 35px;
+	text-align: center;
+	font-size: 25px;
+}
+
+#donatebutton {
+	width: 90%;
+	margin-top: 40px;
+	background-color: #369ff4;
+	border: none;
+	box-shadow: none;
+	height: 60px;
+	font-size: 100%;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
