@@ -9,6 +9,7 @@
 
 /* Reset */
 
+
 	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
 		margin: 0;
 		padding: 0;
@@ -2320,27 +2321,33 @@
 
 #menubar {
 	position: fixed;
+	top: 0;
 	width: 100%;
-	padding-top: 5px;
 	background: rgba(0, 0, 0, 0.50);
+	height: 50px;
+	z-index: 99;
 }
 
-#menubar li {
-	display: inline;
+#menubar ul {
+	height: 100%;
 }
 
-#donatebtn {
-	background: rgba(255, 255, 255, 0.15);
-	color: #fff;
-	border: solid;
-	border-width: 1px;
+#menubar ul li {
+	padding-right: 5px;
 }
 
-#home-link {
-	float: left;
+.menulink {
+	display: inline-block;
 	color: white;
-	font-weight: bold;
-	font-family: Impact, Charcoal, sans-serif;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
 	font-size: 30px;
+	padding-left: 5px;
+	line-height: 50px;
+}
+.menulink:hover {
+	background-color: rgba(255, 255, 255, 0.10);
+}
+
+.menuicon {
 	padding-left: 5px;
 }
