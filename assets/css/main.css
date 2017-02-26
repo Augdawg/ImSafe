@@ -2358,6 +2358,17 @@
 	}
 }
 
+#top {
+	margin: 0;
+	background-image: url("images/overlay.png"), url("../../images/header.jpg");
+	background-size: auto, cover;
+	background-position: top left, center center;
+	background-repeat: repeat, no-repeat;
+	text-align: center;
+	color: #fff;
+	height: 600px;
+}
+
 
 #donationbox {
 	height: 260px;
@@ -2367,6 +2378,7 @@
 	margin-left: 10%;
 	border-radius: 10px;
 	float:left;
+	margin-top: 100px;
 }
 #donationtitle {
 	background-color: #9064BF;
