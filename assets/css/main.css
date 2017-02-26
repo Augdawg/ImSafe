@@ -2354,7 +2354,7 @@
 
 #donationbox {
 	height: 260px;
-	width: 400px;
+	width: 20%;
 	background-color: rgba(255,255,255,0.30);
 	color: black;
 	margin-left: 200px;
@@ -2370,9 +2370,9 @@
 	border-top-right-radius: 10px;
 	width: 100%;
 	margin-top: 0px;
-	font-size: 20px;
+	font-size: 100%;
 	color: white;
-	height: 65px;
+	height: 25%;
 	font-family: "Gotham SSm A","Gotham SSm B","Proxima-Nova-n3","Proxima-Nova-1","Proxima-Nova-2","Proxima Nova",sans-serif;
 	line-height: 50px;
 }
@@ -2394,8 +2394,8 @@
 	padding: 15px;
 	border-style: inset;
 	border-radius: 50%;
-	height: 35px;
-	width: 35px;
+	height: 50%;
+	width: 5%;
 	text-align: center;
 	font-size: 25px;
 }
@@ -2406,19 +2406,18 @@
 	background-color: #369ff4;
 	border: none;
 	box-shadow: none;
-	height: 60px;
+	height: 20%;
 	font-size: 100%;
 	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
 #rssfeedbox {
-	background-color: rgba(255,255,255,0.30);
-	height: 260px;
-	width: 400px;
 	float: right;
 	color: black;
-	margin-right: 200px;
+	margin-right: 10%;
 	border-radius: 10px;
+	width: 25%;
+	height: 20%;
 }
 
 iframe {
