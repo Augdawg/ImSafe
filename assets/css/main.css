@@ -2505,7 +2505,7 @@ iframe {
 }
 @media screen and (max-width: 760px) {
 	#donationtitle {
-		height: 40%;
+		height: 30%;
 		font-size: 100%;
 		text-align: left;
 		line-height: 0px;
@@ -2513,7 +2513,7 @@ iframe {
 		vertical-align: middle;
 	}
 	#donationcontent {
-		margin-top: 5px;
+		margin-top: 10px;
 		font-family: "Gotham SSm A","Gotham SSm B","Proxima-Nova-n3","Proxima-Nova-1","Proxima-Nova-2","Proxima Nova",sans-serif;
 	}
 	#donationinput {
@@ -2529,7 +2529,7 @@ iframe {
 		font-size: 100%;
 	}
 	#donationbox {
-		height: 200px;
+		height: 150px;
 		width: 80%;
 		background-color: rgba(255,255,255,0.30);
 		color: black;
@@ -2542,54 +2542,8 @@ iframe {
 		background-color: #369ff4;
 		border: none;
 		box-shadow: none;
-		margin-top: 5px;
-		height: 25px;
-		font-size: 9px;
-		font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-	}
-}
-
-@media screen and (max-width: 760px) {
-	#donationtitle {
-		height: 40%;
-		font-size: 100%;
-		text-align: left;
-		line-height: 0px;
-		padding: 0px;
-		vertical-align: middle;
-	}
-	#donationcontent {
-		margin-top: 5px;
-		font-family: "Gotham SSm A","Gotham SSm B","Proxima-Nova-n3","Proxima-Nova-1","Proxima-Nova-2","Proxima Nova",sans-serif;
-	}
-	#donationinput {
-		background-color: transparent;
-		border-radius: 3px;
-		border: solid;
-		border-color: rgba(255,255,255,0.30);
-		color: black;
-		height: 40%;
-		width: 75%;
-	}
-	#dollaricon {
-		font-size: 100%;
-	}
-	#donationbox {
-		height: 110px;
-		width: 80%;
-		background-color: rgba(255,255,255,0.30);
-		color: black;
-		margin-left: 10%;
-		border-radius: 10px;
-		float:left;
-	}
-	#donatebutton {
-		width: 90%;
-		background-color: #369ff4;
-		border: none;
-		box-shadow: none;
-		margin-top: 5px;
-		height: 25px;
+		margin-top: 15px;
+		height: 40px;
 		font-size: 9px;
 		font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	}
