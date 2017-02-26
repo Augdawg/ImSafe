@@ -2060,7 +2060,7 @@
 			}
 
 			.main > .content.dark {
-				background: #433;
+				background-color: #ff99e6;
 			}
 
 			.main > .content.style1 {
@@ -2068,7 +2068,7 @@
 			}
 
 			.main > .content.style2 {
-				background: url("images/bgtr.svg") top right no-repeat, url("images/bgbl.svg") bottom left no-repeat, url("images/overlay.png"), linear-gradient(45deg, #384955, #655361, #85505f);
+				
 			}
 
 			.main > .content.style3 {
@@ -2558,3 +2558,4 @@ iframe {
 		width: 65%;
 	}
 }
+
