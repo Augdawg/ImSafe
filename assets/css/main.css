@@ -2443,11 +2443,43 @@ iframe {
 }
 @media screen and (max-width: 1024px) {
 	#donationbox {
-		height: 160px;
-		width: 30%;
+		height: 200px;
+		width: 35%;
 		background-color: rgba(255,255,255,0.30);
 		color: black;
-		margin-left: 10%;
+		margin-left: 35%;
+		border-radius: 10px;
+		float:left;
+		margin-top: 20%;
+	}
+	#donatebutton {
+		width: 90%;
+		background-color: #369ff4;
+		border: none;
+		box-shadow: none;
+		margin-top: 5px;
+		height: 60px;
+		font-size: 15px;
+		margin-top: 15px;
+		font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	}
+}
+@media screen and (max-width: 768px) {
+	#donationtitle {
+		height: 30%;
+		font-size: 110%;
+		text-align: left;
+		line-height: 0px;
+		padding: 0px;
+		vertical-align: middle;
+	}
+	#donationbox {
+		height: 190px;
+		width: 45%;
+		background-color: rgba(255,255,255,0.30);
+		color: black;
+		margin-left: 30%;
+		margin-top: 28%;
 		border-radius: 10px;
 		float:left;
 	}
@@ -2458,36 +2490,8 @@ iframe {
 		box-shadow: none;
 		margin-top: 5px;
 		height: 50px;
-		font-size: 15px;
-		font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-	}
-}
-@media screen and (max-width: 768px) {
-	#donationtitle {
-		height: 35%;
-		font-size: 90%;
-		text-align: left;
-		line-height: 0px;
-		padding: 0px;
-		vertical-align: middle;
-	}
-	#donationbox {
-		height: 150px;
-		width: 45%;
-		background-color: rgba(255,255,255,0.30);
-		color: black;
-		margin-left: 10%;
-		border-radius: 10px;
-		float:left;
-	}
-	#donatebutton {
-		width: 90%;
-		background-color: #369ff4;
-		border: none;
-		box-shadow: none;
-		margin-top: 5px;
-		height: 40px;
 		font-size: 13px;
+		margin-top: 15px;
 		font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	}
 }
