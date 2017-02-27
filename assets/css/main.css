@@ -2378,7 +2378,6 @@
 
 
 #donationbox {
-	height: 240px;
 	width: 25%;
 	background-color: rgba(255,255,255,0.30);
 	color: black;
@@ -2425,17 +2424,16 @@
 	text-align: center;
 	font-size: 20px;
 }
-
 #donatebutton {
-	width: 90%;
-	margin-top: 40px;
-	background-color: #369ff4;
-	border: none;
-	box-shadow: none;
-	height: 20%;
-	font-size: 100%;
-	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-}
+		width: 90%;
+		background-color: #369ff4;
+		border: none;
+		box-shadow: none;
+		height: 20%;
+		font-size: 100%;
+		font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	}
+
 
 #rssfeedbox {
 	float: right;
@@ -2465,10 +2463,8 @@ iframe {
 		background-color: #369ff4;
 		border: none;
 		box-shadow: none;
-		margin-top: 5px;
 		height: 60px;
 		font-size: 15px;
-		margin-top: 15px;
 		font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	}
 }
@@ -2496,10 +2492,8 @@ iframe {
 		background-color: #369ff4;
 		border: none;
 		box-shadow: none;
-		margin-top: 5px;
 		height: 50px;
 		font-size: 13px;
-		margin-top: 15px;
 		font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	}
 }
@@ -2542,7 +2536,7 @@ iframe {
 		background-color: #369ff4;
 		border: none;
 		box-shadow: none;
-		margin-top: 15px;
+		margin-top:5px;
 		height: 40px;
 		font-size: 9px;
 		font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
@@ -2559,3 +2553,6 @@ iframe {
 	}
 }
 
+#test {
+	padding: 10px;
+}
