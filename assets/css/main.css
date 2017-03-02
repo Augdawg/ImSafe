@@ -2060,7 +2060,7 @@
 			}
 
 			.main > .content.dark {
-				background-color: #ff99e6;
+				background-color:#ffca0a;
 			}
 
 			.main > .content.style1 {
@@ -2560,4 +2560,8 @@ iframe {
 .staffpics {
 	width: 90%;
 	padding-left: 10%;
+}
+
+#smallpic {
+	padding-left: 4%;
 }
