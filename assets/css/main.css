@@ -1320,7 +1320,6 @@
 		font-weight: 300;
 		font-size: 17pt;
 		line-height: 1.75em;
-		color: #888;
 		-webkit-text-stroke: 0.1px;
 	}
 
@@ -1350,7 +1349,6 @@
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #666;
 		margin: 0 0 1em 0;
 		font-weight: 100;
 		line-height: 1.5em;
