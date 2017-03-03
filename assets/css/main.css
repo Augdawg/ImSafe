@@ -2068,7 +2068,7 @@
 			}
 
 			.main > .content.style2 {
-				
+
 			}
 
 			.main > .content.style3 {
@@ -2555,4 +2555,9 @@ iframe {
 
 #test {
 	padding: 10px;
+}
+
+.staffpics {
+	width: 90%;
+	padding-left: 10%;
 }
