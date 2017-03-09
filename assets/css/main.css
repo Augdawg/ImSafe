@@ -2335,12 +2335,16 @@
 	padding-right: 5px;
 }
 
+#menulist {
+	padding-right: 10px;
+}
+
 .menulink {
 	display: inline-block;
 	color: white;
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
 	font-size: 30px;
-	padding-left: 5px;
+	padding-left: 15px;
 	line-height: 50px;
 }
 .menulink:hover {
@@ -2351,9 +2355,30 @@
 	padding-left: 5px;
 }
 
+.nonhome {
+	border-right: 1px solid #fff;
+}
+
 @media screen and (max-width: 760px) {
 	.menulink {
 		font-size: 20px;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.menulink {
+		font-size: 17px;
+		padding-left: 5px;
+	}
+
+	#menulist {
+		padding-right: 2px;
+	}
+}
+
+@media screen and (max-width: 350px) {
+	.menulink {
+		font-size: 15px;
 	}
 }
 
