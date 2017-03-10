@@ -2615,6 +2615,11 @@ iframe {
 	color: white;
 }
 
+.piccardinner {
+	border-radius: 5px;
+	width: 90%;
+}
+
 .piccardtext {
 	font-family: "Gotham SSm A","Gotham SSm B","Proxima-Nova-n3","Proxima-Nova-1","Proxima-Nova-2","Proxima Nova",sans-serif;
 	font-weight: bold;
@@ -2629,5 +2634,9 @@ iframe {
 	}
 	#picturecard {
 		height: 250px;
+	}
+
+	.piccardinner {
+		width: 100%;
 	}
 }
