@@ -1389,7 +1389,6 @@
 		a:hover {
 			border-bottom-color: transparent;
 		}
-
 	.dark a {
 		color: #fff;
 		border-bottom-color: rgba(255, 255, 255, 0.5);
@@ -2308,13 +2307,10 @@
 				}
 
 	}
-#contact-link {
-	color: gray;
-	padding-left: 15px;
+.contact-link {
+
 }
-#contact-link:hover {
-	color: black
-}
+
 
 #menubar {
 	position: fixed;
@@ -2639,4 +2635,11 @@ iframe {
 	.piccardinner {
 		width: 100%;
 	}
+}
+#contact-link:hover {
+	font-size: 0; 
+}
+#contact-link:hover:before {
+	font-size: 18px;
+	content: attr(data-hover);
 }
