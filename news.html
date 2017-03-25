@@ -10,7 +10,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	</head>
 	<body>
-		<section id="top" style="background-image: url(images/123.jpg);">
+		<section id="top" style="background-color: #77abff; background-image: none;">
 			<div style="height: 50px;" id="menubar">
 			<ul id="menulist">
 				<li class="menulink">
@@ -28,49 +28,14 @@
 			</ul>
 		</div>
 		<div id="news-landing-wrapper">
-			<p id="news-landing-text">Text</p>
+			<p id="news-landing-text">News</p>
 		</div>
 		<div id="rssfeedbox">
-				<script type="text/javascript">
-					rssfeed_url = new Array();
-					rssfeed_url[0]="https://news.google.com/news?cf=all&hl=en&pz=1&ned=us&output=rss";
-					rssfeed_frame_width="100%";
-					rssfeed_frame_height="260px;";
-					rssfeed_scroll="on";
-					rssfeed_scroll_step="6";
-					rssfeed_scroll_bar="on";
-					rssfeed_target="_blank";
-					rssfeed_font_size="12";
-					rssfeed_font_face="";
-					rssfeed_border="on";
-					//rssfeed_css_url="http://feed.surfing-waves.com/css/style6.css";
-					rssfeed_title="on";
-					rssfeed_title_name="";
-					//rssfeed_title_bgcolor="#9064BF";
-					//rssfeed_title_color="#fff";
-					rssfeed_title_bgimage="http://";
-					rssfeed_footer="off";
-					rssfeed_footer_name="rss feed";
-					//rssfeed_footer_bgcolor="#fff";
-					//rssfeed_footer_color="#333";
-					rssfeed_footer_bgimage="http://";
-					rssfeed_item_title_length="50";
-					rssfeed_item_title_color="#55a0ff";
-					//rssfeed_item_bgcolor="#f2f2f2";
-					rssfeed_item_bgimage="http://";
-					rssfeed_item_border_bottom="on";
-					rssfeed_item_source_icon="off";
-					rssfeed_item_date="off";
-					rssfeed_item_description="on";
-					rssfeed_item_description_length="120";
-					//rssfeed_item_description_color="#666";
-					//rssfeed_item_description_link_color="#333";
-					rssfeed_item_description_tag="off";
-					rssfeed_no_items="0";
-					rssfeed_cache = "f27c51b0e8ec291ddc276b310684336f";
-					</script>
-				<script type="text/javascript" src="http://feed.surfing-waves.com/js/rss-feed.js"></script>
+			<div id="widgetmain" class="scrollbar" style="text-align:left;overflow-y:auto;overflow-x:hidden;width:50%;background-color:#transparent; border:1px solid #293323;">
+					<iframe src="http://us1.rssfeedwidget.com/getrss.php?time=1490382643073&amp;x=http%3A%2F%2Fnews.google.com%2Fnews%3Fned%3Dus%26topic%3Dh%26output%3Drss&amp;w=300&amp;	h=500&amp;bc=293323&amp;bw=1&amp;bgc=transparent&amp;m=20&amp;it=true&amp;t=Sexual Assault News&amp;tc=D4D4D4&amp;ts=15&amp;tb=transparent&amp;il=true&amp;lc=FFFFFF&amp;ls=14&amp;lb=false&amp;id=true&amp;dc=FFFFFF&amp;ds=14&amp;idt=true&amp;dtc=000000&amp;dts=12" border="0" hspace="0" vspace="0" frameborder="no" marginwidth="0" marginheight="0" style="border:0; overflow: hidden; padding:0; margin:0; width:100%; height:500px;" id="rssOutput">
+					</iframe>
 			</div>
+		</div>
 		</section>
 	</body>
 	<script>
@@ -78,13 +43,14 @@
 		var HttpClient = function() {
 			this.get = function(aUrl, aCallback) {
 				var anHttpRequest = new XMLHttpRequest();
+				anHttpRequest.open("GET", feed_url)
+				anHttpRequest.setRequestHeader('Access-Control-Allow-Origin', '*');
 				anHttpRequest.onreadystatechange = function() {
 					if (anHttpRequest.readyState == 4 && anHttpRequest.status == 200) {
 						aCallback(anHttpRequest.responseText);
 					}
 				}
-				anHttpRequest.open("GET", aUrl, true);
-				anHttpRequest.send(null);
+				anHttpRequest.send();
 			}
 		}
 		var client = new HttpClient();

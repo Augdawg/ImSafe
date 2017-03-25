@@ -2394,9 +2394,12 @@
 }
 
 #rssfeedbox {
-	color: black;
+	/*color: black;*/
+	background: rgba(0, 0, 0, 0.15);
 	border-radius: 10px;
 	width: 80%;
+	padding: 10px;
+	display: flex;
 }
 
 iframe {
@@ -2411,4 +2414,20 @@ iframe {
 
 #news-landing-text {
 	font-size: 30px;
+}
+
+#rssOutput::-webkit-scrollbar {
+    height: 12px;
+    width: 12px;
+    background: #000;
+}
+
+#rssOutput::-webkit-scrollbar-thumb {
+    background: #393812;
+    -webkit-border-radius: 1ex;
+    -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);
+}
+
+#rssOutput::-webkit-scrollbar-corner {
+    background: #000;
 }
