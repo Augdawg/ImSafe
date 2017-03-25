@@ -43,13 +43,14 @@
 		var HttpClient = function() {
 			this.get = function(aUrl, aCallback) {
 				var anHttpRequest = new XMLHttpRequest();
-				anHttpRequest.open("GET", feed_url)
-				anHttpRequest.setRequestHeader('Access-Control-Allow-Origin', '*');
+				
+				//anHttpRequest.setRequestHeader('Access-Control-Allow-Origin', '*');
 				anHttpRequest.onreadystatechange = function() {
 					if (anHttpRequest.readyState == 4 && anHttpRequest.status == 200) {
 						aCallback(anHttpRequest.responseText);
 					}
 				}
+				anHttpRequest.open("GET", feed_url)
 				anHttpRequest.send();
 			}
 		}
