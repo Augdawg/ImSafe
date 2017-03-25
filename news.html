@@ -31,7 +31,7 @@
 			<p id="news-landing-text">News</p>
 		</div>
 		<div id="rssfeedbox">
-			<iframe name="rssfeed_frame" width="400" height="200" style="background-color: red;"></iframe>
+			<iframe name="rssfeed_frame" id="rss" width="400" height="200" style="background-color: red;"></iframe>
 			<script type="text/javascript">
 					rssfeed_url = new Array();
 					rssfeed_url[0]="https://news.google.com/news?cf=all&hl=en&pz=1&ned=us&output=rss";
@@ -82,6 +82,7 @@
 
 					    }
 					    //document.write('<iframe name="rssfeed_frame" width="'+a.rssfeed_frame_width+'" height="'+a.rssfeed_frame_height+'" frameborder="0" src="'+c+'" marginwidth="0" marginheight="0" vspace="0" hspace="0" scrolling="no" ALLOWTRANSPARENCY="true"></iframe>')
+					    var r = document.getElementById("#rss");
 					}
 
 					rssProcess()
