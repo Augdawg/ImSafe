@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name='viewport' content='width=device-width, initial-scale=1' />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/news.css" />
+		<link rel="stylesheet" href="style/news.css" />
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	</head>
 	<body>
@@ -35,7 +35,7 @@
 		</section>
 	</body>	
 	<script>
-		$.ajax({type: "GET",
+		/*$.ajax({type: "GET",
 			url: "https://api.forecast.io/forecast/70c6d8448f6fc4a51c2ab2e4c4d2daeb/33.88,%20-84.289?output=jsonp&callback=?",
 			crossDomain: true,
 			dataType: "jsonp",
@@ -48,6 +48,9 @@
 		function failCallback(data) {
 			console.log("Failed");
 		}
+		$.getJSON("https://api.forecast.io/forecast/70c6d8448f6fc4a51c2ab2e4c4d2daeb/33.88,%20-84.289?output=jsonp&callback=?", function(results) {
+			console.log(results);
+		})*/
 		/*$.get("https://api.forecast.io/forecast/70c6d8448f6fc4a51c2ab2e4c4d2daeb/33.88,%20-84.289", function(data, status) {
 			console.log(data);
 		});*/
