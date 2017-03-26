@@ -38,13 +38,14 @@
 		$.ajax({type: "GET",
 			url: "https://api.forecast.io/forecast/70c6d8448f6fc4a51c2ab2e4c4d2daeb/33.88,%20-84.289",
 			crossDomain: true,
-			headers: {Accept: 'application/json', "Access-Control-Allow-Origin": "*"}},
-			successCallback, failCallback);
-		function successCallback() {
+			dataType: "jsonp",
+			jsonpCallback: successCallback,
+			successCallback, failCallback});
+		function successCallback(data) {
 			console.log("Worked");
 		}
 
-		function failCallback() {
+		function failCallback(data) {
 			console.log("Failed");
 		}
 		/*$.get("https://api.forecast.io/forecast/70c6d8448f6fc4a51c2ab2e4c4d2daeb/33.88,%20-84.289", function(data, status) {
