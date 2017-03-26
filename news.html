@@ -31,27 +31,17 @@
 			<p id="news-landing-text">News</p>
 		</div>
 		<div id="rssfeedbox">
-			<button onclick="scriptfunc()">run script</button>
 		</div>
 		</section>
-	</body>
+	</body>	
 	<script>
-		function scriptfunc() {
-			console.log("Hello");
-			$.ajax({
-				type: "GET",
-				url: "tester.php",
-				data: {h: "michael"},
-				success : function(result) {
-					console.log("Ran");
-					console.log("Data: ");
-					console.log(result);
-					console.log(result + 1);
-					console.log("Don");
-					//location.reload();
-				}
-			});
-		}
+		var req = new XMLHttpRequest();
+		req.open("GET", "https://api.forecast.io/forecast/70c6d8448f6fc4a51c2ab2e4c4d2daeb/33.88,%20-84.289", true);
+		req.setRequestHeader("Access-Control-Allow-Origin", "*");
+		req.setRequestHeader("Access-Control-Allow-Methods", "GET,POST,PUT,DELETE,OPTIONS");
+		req.setRequestHeader("Access-Control-Allow-Headers", "Content-Type");
+		req.setRequestHeader("Access-Control-Allow-Credentials", true);
+		req.send(null);
+		console.log(req.responseText);
 	</script>
-	
 </html>
