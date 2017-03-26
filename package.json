@@ -1,0 +1,25 @@
+{
+  "name": "imsafe",
+  "version": "1.0.0",
+  "description": "ImSafe website",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kbettadapur/ImSafe.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kbettadapur/ImSafe/issues"
+  },
+  "homepage": "https://github.com/kbettadapur/ImSafe#readme",
+  "dependencies": {
+    "express": "^4.15.2"
+  },
+  "engines": {
+    "node": "6.9.2"
+  }
+}
