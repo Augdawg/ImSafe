@@ -29,7 +29,7 @@ app.get('/rss', function(req, res) {
 })
 
 app.post('/', function(req, res) {
-	res.send(process.env.api_key);
+	var auth = 'apikey ' + process.env.api_key;
 	res.send(JSON.stringify(req.query.email));
 	var subscriber = JSON.stringify({
 		"email_address":req.query.email,
@@ -40,7 +40,7 @@ app.post('/', function(req, res) {
 		url:' https://us15.api.mailchimp.com/3.0/lists/acd4837d6e/members',
 		body: subscriber,
 		headers: {
-			Authorization: 'apikey 08dbbe80641c7c8c924ad98e6f406e70-us15',
+			Authorization: auth,
 			'Content-Type':'application/json'
 		}
 	},
