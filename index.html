@@ -597,13 +597,24 @@
 				contentType: 'application/json',
 				url: u + '?email=' + em,
 				success: function(data) {
-					console.log('success');
 					console.log(JSON.stringify(data));
 					console.log(u + '?email=' + em);
 				}
 			});
 		});
-		
+	</script>
+	<script>
+	// GET RSS
+		$(document).ready(function() {
+			var u = window.location.href;
+			$.ajax({
+				type: 'GET',
+				url: u + 'rss',
+				success: function(data) {
+					console.log(data)
+				}
+			})
+		});
 	</script>
 
 </body>
