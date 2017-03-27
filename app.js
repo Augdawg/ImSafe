@@ -2,7 +2,6 @@ var express = require('express')
 var app = express()
 var path = require("path");
 var request = require("request");
-const aws = require('aws-sdk');
 
 app.use('/style', express.static("assets/css/"))
 app.use('/fonts', express.static("assets/fonts/"))
@@ -30,11 +29,8 @@ app.get('/rss', function(req, res) {
 })
 
 app.post('/', function(req, res) {
-	let s3 = new aws.S3({
-		api_key: process.env.api_key
-	});
-	res.send(s3.api_key);
-	/*res.send(JSON.stringify(req.query.email));
+	res.send(process.env.api_key);
+	res.send(JSON.stringify(req.query.email));
 	var subscriber = JSON.stringify({
 		"email_address":req.query.email,
 		"status":"subscribed"
@@ -57,7 +53,7 @@ app.post('/', function(req, res) {
 			console.log(bodyObj.status);
 			console.log(bodyObj.email_address);
 		}
-	})*/
+	})
 })
 
 app.listen(process.env.PORT || 3000, function() {
