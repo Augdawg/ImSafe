@@ -33,10 +33,12 @@ app.post('/', function(req, res) {
 	function(error, response, body) {
 		if (error) {
 			console.log("error");
+			res.send("error");
 		} else {
 			var bodyObj = JSON.parse(body);
 			console.log(bodyObj.status);
 			console.log(bodyObj.email_address);
+			res.send(bodyObj.email_address);
 		}
 	})
 })
