@@ -23,7 +23,7 @@ app.post('/', function(req, res) {
 	});
 	request({
 		method:'POST',
-		url:' https://us15.api.mailchimp.com/3.0/lists/ecae46aa40/members',
+		url:' https://us15.api.mailchimp.com/3.0/lists/acd4837d6e/members',
 		body: subscriber,
 		headers: {
 			Authorization: 'apikey 08dbbe80641c7c8c924ad98e6f406e70-us15',
@@ -38,11 +38,10 @@ app.post('/', function(req, res) {
 			var bodyObj = JSON.parse(body);
 			console.log(bodyObj.status);
 			console.log(bodyObj.email_address);
-			res.send(bodyObj.email_address);
 		}
 	})
 })
 
-app.listen(process.env.PORT, function() {
+app.listen(process.env.PORT || 3000, function() {
 	console.log('Running on port 3000');
 })
