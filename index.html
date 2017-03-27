@@ -541,10 +541,10 @@
 				<header style="margin-top: 50px;">
 					<h2 style="font-size: 45px;">Subscribe</h2>
 				</header>
-				<form method="post" action="#">
+				<form method="post" action="#" id="subscribe-form">
 					<div class="row 50%">
 						<div class="6u 12u(mobile)"><input type="text" placeholder="Name" /></div>
-						<div class="6u 12u(mobile)"><input type="text" placeholder="Email" /></div>
+						<div class="6u 12u(mobile)"><input id="email" type="text" placeholder="Email" /></div>
 					</div>
 					<div class="row">
 						<div class="12u">
@@ -574,12 +574,36 @@
 	</section>
 
 	<!-- Scripts -->
+
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="assets/js/skel.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 	<script src="assets/js/main.js"></script>
+
+	<script>
+		$('#subscribe-form').submit(function(e) {
+			e.preventDefault();
+			var data = {}
+			data.title = "title";
+			data.message = "message";
+			var em = document.getElementById("email").value;
+			var u = window.location.href;
+			$.ajax({
+				type: 'POST',
+				data: JSON.stringify(data),
+				contentType: 'application/json',
+				url: u + '?email=' + em,
+				success: function(data) {
+					console.log('success');
+					console.log(JSON.stringify(data));
+				}
+			});
+		});
+		
+	</script>
 
 </body>
 
