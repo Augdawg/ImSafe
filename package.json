@@ -18,7 +18,8 @@
   },
   "homepage": "https://github.com/kbettadapur/ImSafe#readme",
   "dependencies": {
-    "express": "^4.15.2"
+    "express": "^4.15.2",
+    "rss-parser": "^2.6.1"
   },
   "engines": {
     "node": "6.9.2"

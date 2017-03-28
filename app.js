@@ -2,6 +2,7 @@ var express = require('express')
 var app = express()
 var path = require("path");
 var request = require("request");
+var feedparser = require('rss-parser');
 
 app.use('/style', express.static("assets/css/"))
 app.use('/fonts', express.static("assets/fonts/"))
@@ -15,7 +16,8 @@ app.get('/news', function(req, res) {
 	res.sendFile(path.join(__dirname + "/news.html"));
 })
 
-app.get('/rss', function(req, res) {
+app.get('/news/rss', function(req, res) {
+	/*var rssString = '';
 	request({
 		method: 'GET',
 		url: 'https://news.google.com/?output=rss',
@@ -23,9 +25,16 @@ app.get('/rss', function(req, res) {
 		if (error) {
 			console.log("rss error");
 		} else {
+			this.pipe(feedparser);
 			res.send(body);
 		}
-	})
+	})*/
+	var url = 'https://www.justice.gov/feeds/opa/justice-news.xml';
+	var titles = [];
+	feedparser.parseURL(url, function(err, parsed) {
+		res.send(parsed.feed);
+	});
+	console.log(titles.length);
 })
 
 app.post('/', function(req, res) {

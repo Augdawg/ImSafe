@@ -31,28 +31,73 @@
 			<p id="news-landing-text">News</p>
 		</div>
 		<div id="rssfeedbox">
+			<ul>
+				<li id="el1" class="rss-element">
+					<a id="link1" class="link">Title</a>
+					<p id="cont1" class="content">Content</p>
+				</li>
+				<li id="el2" class="rss-element">
+					<a id="link2" class="link">Title</a>
+					<p id="cont2" class="content">Content</p>
+				</li>
+				<li id="el3" class="rss-element">
+					<a id="link3" class="link">Title</a>
+					<p id="cont3" class="content">Content</p>
+				</li>
+				<li id="el4" class="rss-element">
+					<a id="link4" class="link">Title</a>
+					<p id="cont4" class="content">Content</p>
+				</li>
+				<li id="el5" class="rss-element">
+					<a id="link5" class="link">Title</a>
+					<p id="cont5" class="content">Content</p>
+				</li>
+				<li id="el6" class="rss-element">
+					<a id="link6" class="link">Title</a>
+					<p id="cont6" class="content">Content</p>
+				</li>
+				<li id="el7" class="rss-element">
+					<a id="link7" class="link">Title</a>
+					<p id="cont7" class="content">Content</p>
+				</li>
+				<li id="el8" class="rss-element">
+					<a id="link8" class="link">Title</a>
+					<p id="cont8" class="content">Content</p>
+				</li>
+				<li id="el9" class="rss-element">
+					<a id="link9" class="link">Title</a>
+					<p id="cont9" class="content">Content</p>
+				</li>
+			</ul>
 		</div>
 		</section>
 	</body>	
 	<script>
-		/*$.ajax({type: "GET",
-			url: "https://api.forecast.io/forecast/70c6d8448f6fc4a51c2ab2e4c4d2daeb/33.88,%20-84.289?output=jsonp&callback=?",
-			crossDomain: true,
-			dataType: "jsonp",
-			jsonpCallback: successCallback,
-			successCallback, failCallback});
-		function successCallback(data) {
-			console.log("Worked");
-		}
-
-		function failCallback(data) {
-			console.log("Failed");
-		}
-		$.getJSON("https://api.forecast.io/forecast/70c6d8448f6fc4a51c2ab2e4c4d2daeb/33.88,%20-84.289?output=jsonp&callback=?", function(results) {
-			console.log(results);
-		})*/
-		/*$.get("https://api.forecast.io/forecast/70c6d8448f6fc4a51c2ab2e4c4d2daeb/33.88,%20-84.289", function(data, status) {
-			console.log(data);
-		});*/
+	// GET RSS
+		$(document).ready(function() {
+			var u = window.location.href;
+			$.ajax({
+				type: 'GET',
+				url: u + '/rss',
+				success: function(data) {
+					console.log(data);
+					document.getElementById("link1").innerHTML = data.entries[0].title;
+					document.getElementById("link1").href = data.entries[0].link;
+					document.getElementById("cont1").innerHTML = data.entries[0].contentSnippet;
+					var counter = 0;
+					var i = 1;
+					while (counter < 20 && i < 10) {
+						if (data.entries[counter].contentSnippet !== "") {
+							document.getElementById("link" + i).innerHTML = data.entries[counter].title;
+							document.getElementById("link" + i).href = data.entries[counter].link;
+							document.getElementById("link" + i).target = "_blank";
+							document.getElementById("cont" + i).innerHTML = data.entries[counter].contentSnippet;
+							i++;
+						}
+						counter++;
+					}
+				}
+			})
+		});
 	</script>
 </html>
