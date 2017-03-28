@@ -2399,7 +2399,13 @@
 	border-radius: 10px;
 	width: 50%;
 	padding: 10px;
+}
+
+#rsswrapper {
 	display: flex;
+	flex-direction: row;
+	padding-left: 10%;
+	padding-right: 10%;
 }
 
 iframe {
@@ -2438,4 +2444,20 @@ iframe {
 
 #el9 {
 	border-bottom: none;
+}
+
+#news-body {
+	background-color: #77abff;
+}
+
+#videowrapper {
+	padding-left: 5%;
+	display: flex;
+	flex-direction: column;
+}
+
+#videoframe {
+	background-color: white;
+	width: 600px;
+	height: 300px;
 }
