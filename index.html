@@ -391,6 +391,60 @@
 		</div>
 	</section>
 
+	<section class="main">
+		<h1 id="news-title">News</h1>
+		<div id="news-section">
+			<div id="rsswrapper">
+				<div id="rssfeedbox">
+					<div id="rsswrapper">
+						<ul>
+							<li id="el1" class="rss-element">
+								<a id="link1" class="link">link</a>
+								<p id="cont1" class="content"></p>
+							</li>
+							<li id="el2" class="rss-element">
+								<a id="link2" class="link">link</a>
+								<p id="cont2" class="content"></p>
+							</li>
+							<li id="el3" class="rss-element">
+								<a id="link3" class="link"></a>
+								<p id="cont3" class="content"</p>
+							</li>
+							<li id="el4" class="rss-element">
+								<a id="link4" class="link"></a>
+								<p id="cont4" class="content"></p>
+							</li>
+							<li id="el5" class="rss-element">
+								<a id="link5" class="link"></a>
+								<p id="cont5" class="content"></p>
+							</li>
+							<li id="el6" class="rss-element">
+								<a id="link6" class="link"></a>
+								<p id="cont6" class="content"></p>
+							</li>
+							<li id="el7" class="rss-element">
+								<a id="link7" class="link"></a>
+								<p id="cont7" class="content"></p>
+							</li>
+							<li id="el8" class="rss-element">
+								<a id="link8" class="link"></a>
+								<p id="cont8" class="content"></p>
+							</li>
+							<li id="el9" class="rss-element">
+								<a id="link9" class="link"></a>
+								<p id="cont9" class="content"></p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div id="news-videos-wrapper">
+				<div style="height: 300px; background-color: red; width: 533px;"><iframe src="https://www.youtube.com/embed?v=xIyIvj8f0tc" width="300" height="200"></iframe></div>
+				<div style="height: 300px; background-color: red; width: 533px;"></div>
+			</div>
+		</div>
+	</section>
+
 	<!-- Basic Elements -->
 	<!--
 			<section class="main">
@@ -632,7 +686,34 @@
 			});
 		});
 	</script>
-	
+	<script>
+		// GET RSS
+		$(document).ready(function() {
+			var u = window.location.href;
+			$.ajax({
+				type: 'GET',
+				url: u + 'news/rss',
+				success: function(data) {
+					console.log(data);
+					document.getElementById("link1").innerHTML = data.entries[0].title;
+					document.getElementById("link1").href = data.entries[0].link;
+					document.getElementById("cont1").innerHTML = data.entries[0].contentSnippet;
+					var counter = 0;
+					var i = 1;
+					while (counter < 20 && i < 10) {
+						if (data.entries[counter].contentSnippet !== "") {
+							document.getElementById("link" + i).innerHTML = data.entries[counter].title;
+							document.getElementById("link" + i).href = data.entries[counter].link;
+							document.getElementById("link" + i).target = "_blank";
+							document.getElementById("cont" + i).innerHTML = data.entries[counter].contentSnippet;
+							i++;
+						}
+						counter++;
+					}
+				}
+			})
+		});
+	</script>
 
 </body>
 
