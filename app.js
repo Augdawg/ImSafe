@@ -39,11 +39,11 @@ app.get('/news/rss', function(req, res) {
 
 app.post('/', function(req, res) {
 	var auth = 'apikey ' + process.env.api_key;
-	res.send(JSON.stringify(req.query.email));
 	var subscriber = JSON.stringify({
 		"email_address":req.query.email,
 		"status":"subscribed"
 	});
+
 	request({
 		method:'POST',
 		url:' https://us15.api.mailchimp.com/3.0/lists/acd4837d6e/members',
