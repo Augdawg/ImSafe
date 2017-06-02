@@ -494,7 +494,7 @@
 								<p class="piccardtext" style="color: black;">
 									The Bureau of Justice Statistics has initiated two projects, develop and test the best methods for collecting data on rape and sexual assault. 
 								</p>
-								<button class="piccardbutton" style="background: #67b26a;">Donate
+								<button class="piccardbutton" style="background: #67b26a;">Learn More
 								</button>
 							</div>
 						</div>
@@ -508,7 +508,7 @@
 								<p class="piccardtext" style="color: black;">
 									RAINN is the nation’s largest anti-sexual violence organization. They fight to prevent sexual violence, help victims, and bring perpetrators to justice.
 								</p>
-								<button class="piccardbutton" style="background: #624087;">Fundraise
+								<button class="piccardbutton" style="background: #624087;">Learn More
 								</button>
 							</div>
 						</div>
@@ -522,7 +522,7 @@
 								<p class="piccardtext" style="color: black;">
 									NSOPW is the only U.S. government Website that links public state, territorial, and tribal sex offender registries from one national search site. 
 								</p>
-								<button class="piccardbutton" style="background: #624087;">Fundraise
+								<button class="piccardbutton" style="background: #624087;">Learn More
 								</button>
 							</div>
 						</div>
@@ -780,32 +780,6 @@
 		});
 	</script>
 	<script>
-		// GET RSS
-		$(document).ready(function() {
-			var u = window.location.href;
-			$.ajax({
-				type: 'GET',
-				url: u + 'news/rss',
-				success: function(data) {
-					console.log(data);
-					document.getElementById("link1").innerHTML = data.entries[0].title;
-					document.getElementById("link1").href = data.entries[0].link;
-					document.getElementById("cont1").innerHTML = data.entries[0].contentSnippet;
-					var counter = 0;
-					var i = 1;
-					while (counter < 20 && i < 10) {
-						if (data.entries[counter].contentSnippet !== "") {
-							document.getElementById("link" + i).innerHTML = data.entries[counter].title;
-							document.getElementById("link" + i).href = data.entries[counter].link;
-							document.getElementById("link" + i).target = "_blank";
-							document.getElementById("cont" + i).innerHTML = data.entries[counter].contentSnippet;
-							i++;
-						}
-						counter++;
-					}
-				}
-			})
-		});
 	</script>
 
 </body>
